@@ -49,30 +49,42 @@ The second level was to classify the traffic signs in STOP, WARNING and REGULART
 # 4. DATA COLLECTION:
 
 For creating classification models to recognize the traffic signs, we created our own dataset. Since our idea was to classify between the mentioned three main categories, we collected images accordingly. There were total 738 images collected which were as follows:
+
 a. Stop sign – 245 images
+
 b. Warning sign – 210 images
+
 c. Regulatory sign – 283 images
+
 These images were collected from google images, where we tried to include images of all types such as the one which were distinct, blur or images that had low resolution.
 These are the few images we used in the dataset for classification.
 
 # 5. DATA PRE-PROCESSING:
 
 As discussed earlier, our approach for classification was divided in two stages.
-a. We created dataset as per the data required to work in these two stages.
 
-- For STAGE 1 Classification i.e., STOP/Non-STOP Classification, we created a dataset from the images collected like below:
-STOP Sign: 241 images
-NON-STOP Signs (WARNING + REGULARTORY) Signs: 227 images
-- For STAGE 2 Classification i.e., STOP, WARNING, REGULARTORY Signs, we created a dataset from the images collected like below:
-Stop sign – 245 images
-Warning sign – 210 images
-Regulatory sign – 283 images
-b. We used OpenCV for converting BGR channel to RGB color channel.
-c. For standardization, we resized images to resolution of 150 x 150 size to make all images consistent.
-d. Converted pixel representations to numpy array.
-e. We used ImageDataGenerator object for rescaling by using rescale = 1. /255 which normalizes the image pixel values to have zero mean and standard deviation of 1.
-f. Data augmentation was done to add diversity to the dataset and to scale the dataset to avoid overfitting in the model. Each image was augmented by rescaling, rotating, height shifting, width shifting and zooming in and out.
-g. Train-Test Split: The dataset was split into training and test set in 80:20 ratio.
+  a. We created dataset as per the data required to work in these two stages.
+
+    - For STAGE 1 Classification i.e., STOP/Non-STOP Classification, we created a dataset from the images collected like below:
+        STOP Sign: 241 images
+        NON-STOP Signs (WARNING + REGULARTORY) Signs: 227 images
+
+    - For STAGE 2 Classification i.e., STOP, WARNING, REGULARTORY Signs, we created a dataset from the images collected like below:
+        Stop sign – 245 images
+        Warning sign – 210 images
+        Regulatory sign – 283 images
+
+  b. We used OpenCV for converting BGR channel to RGB color channel.
+  
+  c. For standardization, we resized images to resolution of 150 x 150 size to make all images consistent.
+
+  d. Converted pixel representations to numpy array.
+
+  e. We used ImageDataGenerator object for rescaling by using rescale = 1. /255 which normalizes the image pixel values to have zero mean and standard deviation of 1.
+
+  f. Data augmentation was done to add diversity to the dataset and to scale the dataset to avoid overfitting in the model. Each image was augmented by rescaling, rotating, height shifting, width shifting and zooming in and out.
+  
+  g. Train-Test Split: The dataset was split into training and test set in 80:20 ratio.
 
 # 6. DATA MODELLING:
 
@@ -102,10 +114,11 @@ g. Train-Test Split: The dataset was split into training and test set in 80:20 r
 # 7.MODEL EVALUTAION:
 
 Model evaluation was done with the help of Accuracy and F1-Score. Different combination of neural network models was tried, and best model was picked with best accuracy and F1 Score amongst all the tried combination.
-  A. Binary classification model:
+
+    A. Binary classification model:
       Accuracy: 0.861702
       F1_score: 0.839506
-  B. Multiclass classification model:
+    B. Multiclass classification model:
       Accuracy: 0.842
 
 
