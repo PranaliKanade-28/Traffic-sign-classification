@@ -1,26 +1,28 @@
 # Traffic-sign-classification
 
 
-ISM 6251 Data Science Programming
-
-Prof. Balaji Padmanabhan
-
-Team members:
-
-Mandeep Singh, Neti Sheth, Pranjal Shrivastava, Pranali Kanade
-
 # Index
 
 1: Introduction 
+
 2: Motivation 
+
 3: Methodology 
+
 4: Data Collection 
+
 5: Data Preprocessing 
+
 6: Data Modelling 
+
 7: Model Evaluation 
+
 8: Future Work 
+
 9: Conclusion 
+
 10: References 
+
 
 # 1. INTRODUCTION:
 
