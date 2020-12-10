@@ -89,26 +89,46 @@ As discussed earlier, our approach for classification was divided in two stages.
 # 6. DATA MODELLING:
 
   A. STAGE 1 
+  
       Model: Binary Classification using CNN Classifier:
+      
         1. For STAGE 1 Model, our aim was to distinguish between STOP and Non-STOP Signs.
+        
         2. After processing the data as described in Data preprocessing above, we created a sequential model and specified CNN models various layers.
+        
            a. We initialized three sets of convolution layers with a (3 x 3) kernel to help the model identify features and shapes with the traffic signs.
+           
            b. These layers were then passed to the “relu” activation function.
+           
            c. The layers were then passed through a MaxPooling function in order to reduce the dimensionality and let the model makes assumptions about features within the sub-regions.
+           
            d. To generate the output vectors, we flattened the data before passing it through the dense layers ahead.
+           
            e. A dropout layer was added to this model in order to prevent overfitting, as we had a small dataset.
+           
            f. The activation function used to get a two-class output was “sigmoid” function which was connected to the final dense layer.
+           
 
   B. STAGE 2 
+  
       Model: Multi-class Classification using CNN Classifier:
+      
         1. For STAGE 2 Model, our aim was to distinguish between STOP, WARNING and REGULATORY Signs.
+        
         2. After processing the data as described in Data preprocessing above, we created a sequential model and specified CNN models various layers.
+        
           a. We initialized three sets of convolution layers with a (3 x 3) kernel to help the model identify features and shapes with the traffic signs.
+          
           b. These layers were then passed to the “relu” activation function.
+          
           c. The layers were then passed through a MaxPooling function in order to reduce the dimensionality and let the model makes assumptions about features within the sub-regions.
+          
           d. To generate the output vectors, we flattened the data before passing it through the dense layers ahead.
+          
           e. A dropout layer was added to this model in order to prevent overfitting, as we had a small dataset.
+          
           f. The activation function used to get a multi-class output was “softmax” function which was connected to the final dense layer.
+          
 
 
 # 7.MODEL EVALUTAION:
@@ -127,11 +147,17 @@ Model evaluation was done with the help of Accuracy and F1-Score. Different comb
 The basic image classification model can be used to train self-driving cars in the classification of road signs while driving, but we would like to further enhance it with real-time complexities. We also want to further train the model for multiple sign detection in images and videos.
 Currently there are many models which are implemented and being used for training self-driving cars. But we would also like to explore further given we have more computing resources and data.
 Few of the features that can be implemented in the near future are:
+
 a. Training model on a much bigger dataset for more accurate predictions
+
 b. Detecting all unique traffic signs and not just a category
+
 c. Detecting multiple signs correctly in a single image
+
 d. Detecting signs correctly in blur images or far-away images.
+
 e. Detecting unique traffic signs in a video
+
 
 # 9. CONCLUSION:
 
@@ -140,9 +166,15 @@ We built different basic model for recognizing traffic road signs in an image wh
 # 10. REFERENCES:
 
 a. https://towardsdatascience.com/wtf-is-image-classification-8e78a8235acb
+
 b. https://www.pyimagesearch.com/2018/09/10/keras-tutorial-how-to-get-started-with-keras-deep-learning-and-python/
+
 c. https://www.pyimagesearch.com/2018/05/14/a-gentle-guide-to-deep-learning-object-detection/
+
 d. https://machinelearningmastery.com/object-recognition-with-deep-learning/
+
 e. https://pythonprogramming.net/loading-custom-data-deep-learning-python-tensorflow-keras/
+
 f. https://note.nkmk.me/en/python-opencv-bgr-rgb-cvtcolor/
+
 g. https://www.geeksforgeeks.org/opencv-and-keras-traffic-sign-classification-for-self-driving-car/
