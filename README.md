@@ -2,8 +2,11 @@
 
 
 ISM 6251 Data Science Programming
+
 Prof. Balaji Padmanabhan
+
 Team members:
+
 Mandeep Singh, Neti Sheth, Pranjal Shrivastava, Pranali Kanade
 
 # Index
